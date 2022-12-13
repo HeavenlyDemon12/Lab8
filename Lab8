@@ -1,0 +1,59 @@
+#1
+import re
+p=input("Enter your phone number")
+a=re.compile('\d{3}-\d{3}-\d{4}')
+if a.search(p) == None:
+    print("The number is a invalid number")
+else:
+    print("The number is valid number")
+h=a.search(p)
+e=input("Enter your email Id")
+b=re.compile('\w+@gmail.com')
+if b.search(e) == None:
+    print("The number is a invalid email Id")
+else:
+    print("The number is valid email Id")
+j=b.search(e)
+
+#2
+import re
+p=input("Enter your password ")
+a=re.compile('[A-Z a-z 0-9 @!#$%^&*]{8,16}')
+if a.search(p) == None:
+    print("Unuccessful password,Try again ") 
+else:
+    print("Successful ")
+q=input("Enter your password again ")
+b=re.compile('[A-Z a-z 0-9 @!#$%^&*]{8,16}')
+if (a==b):
+      print("Successful Welcome ")
+else:
+    print("Unuccessful password,Try again ") 
+    
+#3
+import re
+p=input("Enter your sentence ")
+a=re.sub(r'\s','_',p)
+print(a)
+b=re.sub(r'_',' ',p)
+print(b)
+
+#4
+import re
+p=input("Enter date according to your choice:  ")
+a=re.sub(r'(\d{4})-(\d{1,2})-(\d{1,2})', '\\3-\\2-\\1',p)
+print("The date yyyy-mm-dd format is "+str(p))
+print("The date dd-mm-yyyy format is "+str(a))
+
+#5
+import re
+p=input("Enter the sentence : ")
+a=re.sub(r'road','rd',p)
+print(a)
+
+
+#6
+import re
+p=input("Enter the sentence : ")
+a=re.sub(r'\s|\.|,',':',p)
+print(a)
